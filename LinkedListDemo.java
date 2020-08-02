@@ -81,10 +81,14 @@ class LinkedList {
     }
 
     public void deleteFirstNode() {
-        Node node = head;
-        head = node.next;
-        node.next = null;
-        System.out.println("Deleted node is : " + node.data);
+        if(head == null) {
+            System.out.println("Queue is empty.");    
+        } else {
+            Node node = head;
+            head = node.next;
+            node.next = null;
+            System.out.println("Deleted node is : " + node.data);
+        }
     }
 
     public void deleteLastNode() {
