@@ -13,10 +13,14 @@ class LinkedList {
     }
 
     public void displayList() {
-        Node node = head;
-        while(node != null) {
-            System.out.println(node.data);
-            node = node.next;
+        if(head == null) {
+            System.out.println("Empty Queue.");
+        } else {
+            Node node = head;
+            while(node != null) {
+                System.out.println(node.data);
+                node = node.next;
+            }
         }
     }  
 
